@@ -1,0 +1,39 @@
+/* Seperate the Numbers Hackkerrank Solution Golang
+
+A numeric string,s, is beautiful if it can be split into a sequence of two or more positive integers
+satisfying the following conditions:
+1. a[i]  a[i-1]=1 for any 1<i<=n(i.e., each element in the sequence is more than the previous element).
+2. No contains a leading zero. For example, we can split into the sequence , but it is not
+beautiful because and have leading zeroes.
+3. The contents of the sequence cannot be rearranged. For example, we can split into the sequence
+, but it is not beautiful because it breaks our first constraint (i.e., ).
+The diagram below depicts some beautiful strings:
+You must perform queries where each query consists of some integer string . For each query, print whether or not the
+string is beautiful on a new line. If it's beautiful, print YES x , where is the first number of the increasing sequence. If
+there are multiple such values of , choose the smallest. Otherwise, print NO .
+
+Solutions:
+ 
+ We need to follow the follwing steps in order to get the solutions
+ 
+ 1)If we get any single digit input we can directly print NO since it will not satisfy any of the conditions required
+   for the beautiful string
+ 
+ 2)For any string containing more than single digit, we will try to follow below substeps:
+    2.1)We will get ith length digit by the function getIntFromString() and assign it to num1
+	
+	2.2)We will try to increment by 1 num1 and concat it to numStr till it is equal to the length of the string 
+    
+	2.3)Finally we will compare the numStr with the original string if it is equal then we have find the beautiful string.
+	   Otherwise,we will keep incrementing the i till the half length of the string because if we add 1 to the length of the 
+	   number which is greater than half length of the string then it won't be possible to get the beautiful string
+	   E.g
+	      99100
+		  half_length=2
+		 Take length=3
+		 then num=991
+		 
+		 Add 1 to the num, num=992
+		 and then concat  so the final string 991992 so the length is the greater than the original string
+	
+  
