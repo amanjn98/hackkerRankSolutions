@@ -15,7 +15,7 @@ type Graph struct {
 	directed bool
 }
 
-// We then create a constructor function for the Key
+// NewVertex We then create a constructor function for the Key
 func NewVertex(key int) *Node {
 	return &Node{
 		Key:      key,
