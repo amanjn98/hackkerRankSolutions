@@ -33,7 +33,7 @@ type NodeData struct {
 	Distance int
 }
 
-func verify(row int, col int, M int, N int) bool {
+func Verify(row int, col int, M int, N int) bool {
 	return (row >= 0 && row < M) && (col >= 0 && col < N)
 }
 
@@ -66,7 +66,7 @@ func CalculateDistance(matrix [][]rune) [][]int {
 		node := queue[0]
 		queue = queue[1:]
 		for i := 0; i < 4; i++ {
-			if verify(row[i]+node.X, col[i]+node.Y, M, N) &&
+			if Verify(row[i]+node.X, col[i]+node.Y, M, N) &&
 				isSafe(matrix[row[i]+node.X][col[i]+node.Y], result[row[i]+node.X][col[i]+node.Y]) {
 				result[row[i]+node.X][col[i]+node.Y] = node.Distance + 1
 				queue = append(queue, NodeData{node.X + row[i], node.Y + col[i], node.Distance + 1})

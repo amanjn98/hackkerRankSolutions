@@ -1,8 +1,8 @@
 package main
 
 import (
-	//"./Graph"
-	"./Recursion"
+	"./Dp"
+	"fmt"
 )
 
 func main() {
@@ -14,7 +14,11 @@ func main() {
 	//	{'O', 'O', 'M', 'O', 'O'},
 	//	{'O', 'X', 'X', 'M', 'O'},
 	//}
-	Recursion.PrintSubset("aab", "")
+	//weight := []int{31, 26, 33, 21, 40}
+	//matrix := [][]int{{100, -42, -46, -41}, {31, 97, 10, -10}, {-58, -51, 82, 89}, {51, 81, 69, -51}}
+	fmt.Println((Dp.MinSteps(6)))
+	fmt.Println()
+	//Recursion.PrintSubset("aab", "")
 }
 
 // Send and receive integers to a channel using go routines.

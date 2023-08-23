@@ -1,0 +1,4 @@
+https://www.codingninjas.com/studio/problem-lists/top-graphs-interview-questions
+https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns
+https://www.youtube.com/watch?v=m8Icp_Cid5o
+https://www.youtube.com/watch?v=qMky6D6YtXU&t=344s

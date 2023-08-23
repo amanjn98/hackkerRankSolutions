@@ -5,7 +5,6 @@ import (
 )
 
 // Bellman_Ford_Algorithm Bellman_Ford_Algo is used for finding the shortest distance route from source to destination
-// It will not work in case of negative weight cycle
 func Bellman_Ford_Algorithm(edges []Edge, start int) {
 	distances := make([]float64, len(edges))
 	for i := 0; i < len(edges); i++ {
