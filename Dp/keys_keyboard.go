@@ -43,3 +43,5 @@ func MinSteps(n int) int {
 	}
 	return result
 }
+
+// NOtes : This is a simple solution and we can think of prime factorization problem
