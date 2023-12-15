@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./Dp"
-	"fmt"
+	"./Recursion"
+	"./SlidingWindow"
 )
 
 func main() {
@@ -17,9 +17,36 @@ func main() {
 	//weight := []int{31, 26, 33, 21, 40}
 	//matrix := [][]byte{{'1', '1', '1', '1', '0'}, {'1', '1', '1', '1', '0'}, {'1', '1', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'0', '0', '1', '1', '1'}}
 	//strs := []string{"10", "0001", '1', '0', "11001"}
-	fmt.Println(Dp.KnightProbability(3, 2, 0, 0))
-	fmt.Println()
-	//Recursion.PrintSubset("aab", "")
+	//arr := []int{1, 2, 3}
+	//k := 4
+	//
+	//subsets := Recursion.GenerateSubsetsWithProductLessThanOrEqual(arr, k)
+	//fmt.Println(subsets)
+	//ipArray := []string{}
+	//Recursion.PrintUniqueSubset("abcde", "", &ipArray)
+	//ipArray = Recursion.RemoveDuplicates(ipArray)
+	//fmt.Print(ipArray)
+	//k := 12
+	//Trial.TestQuantity()
+	nums := []int{9, 10, 9, -7, -4, -8, 2, -6}
+	SlidingWindow.MaxSlidingWindow(nums, 5)
+
+	//fmt.Println(Dp.CountSubsetSum(12, arr))
+
+}
+
+func substringCalculator(s string) int64 {
+	// Write your code here
+	ipArray := []string{}
+	ss := map[string]struct{}{}
+	for i := range s {
+		for j := i + 1; j <= len(s); j++ {
+			ss[s[i:j]] = struct{}{}
+		}
+	}
+	Recursion.PrintUniqueSubset(s, "", &ipArray)
+	result := Recursion.RemoveDuplicates(ipArray)
+	return int64(len(result))
 }
 
 // Send and receive integers to a channel using go routines.
