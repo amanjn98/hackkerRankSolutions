@@ -6,7 +6,7 @@ import (
 )
 
 func TestHeight(t *testing.T) {
-	root := initialize()
+	root := Initialize()
 	actual := Height(&root)
 	assert.Equal(t, 3, actual)
 

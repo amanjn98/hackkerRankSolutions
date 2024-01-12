@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./Recursion"
 	"./SlidingWindow"
+	"fmt"
 )
 
 func main() {
@@ -28,26 +28,31 @@ func main() {
 	//fmt.Print(ipArray)
 	//k := 12
 	//Trial.TestQuantity()
-	nums := []int{9, 10, 9, -7, -4, -8, 2, -6}
-	SlidingWindow.MaxSlidingWindow(nums, 5)
-
+	//nums := []int{9, 10, 9, -7, -4, -8, 2, -6}
+	//SlidingWindow.MaxSlidingWindow(nums, 5)
+	//t := Tree.Initialize()
+	//fmt.Println(Tree.LevelOrder(&t))
 	//fmt.Println(Dp.CountSubsetSum(12, arr))
+	//.PermutationString("XY", 0, len("XY")-1)
+	//root := Tree.Initialize()
+	//Tree.PrintPaths(&root, -5)
+	fmt.Println(SlidingWindow.LengthOfLongestSubstring("abcabcbb"))
 
 }
 
-func substringCalculator(s string) int64 {
-	// Write your code here
-	ipArray := []string{}
-	ss := map[string]struct{}{}
-	for i := range s {
-		for j := i + 1; j <= len(s); j++ {
-			ss[s[i:j]] = struct{}{}
-		}
-	}
-	Recursion.PrintUniqueSubset(s, "", &ipArray)
-	result := Recursion.RemoveDuplicates(ipArray)
-	return int64(len(result))
-}
+//func substringCalculator(s string) int64 {
+//	// Write your code here
+//	ipArray := []string{}
+//	ss := map[string]struct{}{}
+//	for i := range s {
+//		for j := i + 1; j <= len(s); j++ {
+//			ss[s[i:j]] = struct{}{}
+//		}
+//	}
+//	//Recursion.PrintUniqueSubset(s, "", &ipArray)
+//	//result := Recursion.RemoveDuplicates(ipArray)
+//	//return int64(len(result))
+//}
 
 // Send and receive integers to a channel using go routines.
 // In the main function call a function "generator" which will add 10 integers to a channel; return the channel from the functions.
