@@ -36,7 +36,8 @@ func main() {
 	//.PermutationString("XY", 0, len("XY")-1)
 	//root := Tree.Initialize()
 	//Tree.PrintPaths(&root, -5)
-	fmt.Println(SlidingWindow.LengthOfLongestSubstring("abcabcbb"))
+	a := []int{1, 2, 3, 2, 2}
+	fmt.Println(SlidingWindow.TotalFruit(a))
 
 }
 
