@@ -17,7 +17,7 @@ jobs:
             git config --global user.email "amanjn82@gmail.com"
             git config --global user.name "Aman Chhabra"
             echo "Release Tag: ${{ github.ref_name }}"
-            release_tag=${{ github.ref_name }}
+            release_tag="${{ github.ref_name }}"
             # Update the value in the specified file (replace with your details)
             npx yaml-update -f hackkerRankSolutions/version.go version=$release_tag
             git add hackkerRankSolutions/version.go
