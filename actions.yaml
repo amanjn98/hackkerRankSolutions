@@ -1,8 +1,10 @@
 name: Update Values on Release
 
+# Trigger the create release workflow
 on:
-  release:
-    types: [ published ]  # Trigger only on published releases
+  push:
+    tags:
+      - 'v*' # Trigger only in case of new tag
 
 jobs:
   update_values:
