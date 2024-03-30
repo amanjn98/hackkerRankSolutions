@@ -19,7 +19,7 @@ jobs:
             git config --global user.name "Aman Chhabra"
             release_tag=${{ github.event.release.tag_name }}
             # Update the value in the specified file (replace with your details)
-            npx yaml-update -f hackkerRankSolutions/actions.yaml version=$release_tag
-            git add hackkerRankSolutions/actions.yaml
+            npx yaml-update -f hackkerRankSolutions/version.go version=$release_tag
+            git add hackkerRankSolutions/version.go
             git commit -m "Update version to $release_tag in actions.yaml"
             git push origin main
