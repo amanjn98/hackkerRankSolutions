@@ -1,6 +1,5 @@
-name: Update Values on Release
+name: Update Values on Tag
 
-# Trigger the create release workflow
 on:
   push:
     tags:
