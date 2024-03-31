@@ -21,8 +21,8 @@ jobs:
             sed -i "s/const version = .*/const version = \"$release_tag\"/" ../../version.go
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "amanjn82@gmail.com"
+          git config --local user.name "amanjn98"
           git add .
           git commit -m "Update version"
           git push
