@@ -20,7 +20,8 @@ jobs:
             python -m pip install
       - name: Run update script
         uses: shyiko/ act@v2  # Use the act action to run Python script
-        script: |
+        with:
+          script: |
             python update_constant.py \
             --file_path ../../version.go \
             --constant_name version \
