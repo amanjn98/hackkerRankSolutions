@@ -16,9 +16,7 @@ jobs:
             echo "Release Tag: ${{ github.ref_name }}"
             release_tag="${{ github.ref_name }}"
       - name: Run update script
-        with:
-        python-version: '3.9.6'
-        script: |
+        run: |
             python update_constant.py \
             --file_path ../../version.go \
             --constant_name version \
