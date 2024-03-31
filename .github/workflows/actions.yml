@@ -19,7 +19,9 @@ jobs:
             echo "Release Tag: ${{ github.ref_name }}"
             release_tag="${{ github.ref_name }}"
             # Update the value in the specified file (replace with your details)
-            npx yaml-update -f hackkerRankSolutions/version.go version=$release_tag
-            git add hackkerRankSolutions/version.go
+            sed -i "s/const version = .*/const version = \"$release_tag\"/" ./hackkerRankSolutions/version.go
+            git add version.go
             git commit -m "Update version to $release_tag in actions.yaml"
             git push origin main
+            
+        

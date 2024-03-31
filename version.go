@@ -1,5 +1,3 @@
-package main // Replace with your package name
+package main
 
-const (
-	version string = "v1"
-)
+const version = "v1.2.0"
