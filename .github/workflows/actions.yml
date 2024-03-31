@@ -20,7 +20,7 @@ jobs:
             release_tag="${{ github.ref_name }}"
             # Update the value in the specified file (replace with your details)
             sed -i "s/const version = .*/const version = \"$release_tag\"/" ../../version.go
-            git add ../../version.go
+            git add .../../version.go
             git commit -m "Update version to $release_tag in actions.yaml"
             git push origin main
             
