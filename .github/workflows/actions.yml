@@ -37,7 +37,7 @@ jobs:
             if [[ $(git diff version.go) != "" ]]; then
               git add version.go
               git commit -m "[CI] Bump version to $VERSION"
-              git push -u origin main
+              git push origin main
             fi
             
         
