@@ -35,6 +35,7 @@ jobs:
             git config user.name 'amanjn82@gmail.com'
             git config user.email 'amanjn98'
             if [[ $(git diff version.go) != "" ]]; then
+              git checkout main 
               git add version.go
               git commit -m "[CI] Bump version to $VERSION"
               git push 
