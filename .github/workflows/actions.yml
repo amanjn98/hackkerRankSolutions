@@ -30,7 +30,7 @@ jobs:
             fi
             echo "VERSION=$VERSION" | tee -a "$GITHUB_ENV"
       - name: Checkout branch
-        if : startsWith(github.ref, 'refs/tags/*')
+        if : startsWith(github.ref, 'refs/tags/v')
         run: git checkout -B temp_branch
       - name: Bump version on release [${{ env.VERSION }}]
         if: startsWith(github.ref, 'refs/tags/v')
