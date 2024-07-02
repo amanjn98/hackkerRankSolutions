@@ -30,10 +30,10 @@ func execute() {
 	fmt.Println("Command Successfully Executed")
 }
 
- func main() {
-	if runtime.GOOS == "windows" {
-		fmt.Println("Can't Execute this on a windows machine")
-	} else {
-		execute()
-	}
-}
+//  func main() {
+// 	if runtime.GOOS == "windows" {
+// 		fmt.Println("Can't Execute this on a windows machine")
+// 	} else {
+// 		execute()
+// 	}
+// }

@@ -27,8 +27,8 @@ func angryProfessor(k int32, a []int32) string {
 	return "YES"
 }
 
-func main()  {
-	a:=[]int32{-1,-1,0,2,3}
-	fmt.Println(angryProfessor(4,a))
-}
+// func main()  {
+// 	a:=[]int32{-1,-1,0,2,3}
+// 	fmt.Println(angryProfessor(4,a))
+// }
 

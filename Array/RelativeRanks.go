@@ -1,0 +1,59 @@
+package Array
+
+import (
+	"fmt"
+	"sort"
+	"strconv"
+)
+
+//You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.
+//
+//The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:
+//
+//The 1st place athlete's rank is "Gold Medal".
+//The 2nd place athlete's rank is "Silver Medal".
+//The 3rd place athlete's rank is "Bronze Medal".
+//For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
+//Return an array answer of size n where answer[i] is the rank of the ith athlete.
+//506. Relative Ranks
+
+var str = strconv.Itoa
+func getIndex(num int, score []int) int {
+	for x , v := range score {
+		if v == num {
+			return x
+		}
+	}
+	return -1
+}
+
+func makeOutput(scores []int, m map[int]string) []string {
+	output := []string{}
+	for x,_ := range scores {
+		output = append(output,m[x])
+	}
+	return output
+}
+
+func findRelativeRanks(score []int) []string {
+	scores := make([]int,len(score))
+	copy(scores,score)
+	sort.Slice(scores,func(i,j int) bool {
+		return scores[i] > scores[j]
+	})
+
+	medals := []string{"Gold Medal","Silver Medal","Bronze Medal"}
+	m := map[int]string{}
+	// output := make([]string,len(scores))
+	for x , v := range scores {
+		if x < len(medals) {
+			m[getIndex(v,score)] = medals[x]
+		} else {
+			m[getIndex(v,score)] = str(x+1)
+		}
+	}
+
+	fmt.Println(m)
+	return makeOutput(score,m)
+}
+

@@ -45,7 +45,7 @@ func TestQuantity() {
 	//quantity := resource.MustParse("1Gi")
 
 	// Converting a quantity to a string:
-	//str := quantity.String()
+	//str := quantity.StringTopic()
 	//fmt.Println(str)
 
 	// Adding two quantities together:

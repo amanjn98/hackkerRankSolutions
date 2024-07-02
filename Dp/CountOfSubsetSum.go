@@ -16,7 +16,7 @@ func CountSubsetSum(sum int, arr []int) int {
 	for i := 1; i <= len(arr); i++ {
 		for j := 1; j <= sum; j++ {
 			if arr[i-1] <= j {
-				dp[i][j] = 1 + dp[i-1][j]
+				dp[i][j] = dp[i-1][j-arr[i-1]] + dp[i-1][j]
 			} else {
 				dp[i][j] = dp[i-1][j]
 			}

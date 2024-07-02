@@ -1,33 +1,28 @@
 package main
 
 import (
+	"./Graph"
 	"fmt"
-	"gopkg.in/alecthomas/kingpin.v2"
 )
 
-func initFunc() {
-	fmt.Println(version)
-	kingpin.Version(version)
-	//for _, kv := range info.Settings {
-	//	if kv.Value == "" {
-	//		continue
-	//	}
-	//	switch kv.Key {
-	//	case "vcs.revision":
-	//		Revision = kv.Value
-	//	case "vcs.time":
-	//		LastCommit, _ = time.Parse(time.RFC3339, kv.Value)
-	//	case "vcs.modified":
-	//		DirtyBuild = kv.Value == "true"
-	//	}
-	//}
-}
 func main() {
 	//SlidingWindow.MaxSatisfied([]int{7, 8, 8, 6}, []int{0, 1, 0, 1}, 3)
 	//trust := [][]int{{1, 3}, {2, 3}, {3, 1}}
 	//fmt.Println(Array.FindJudge(3, trust))
 	//fmt.Println(Graph.FindAllPeople(4, [][]int{{3, 1, 3}, {1, 2, 2}, {0, 3, 3}}, 3))
-	initFunc()
+	//head := Linked_list.ListNode{5, nil}
+	//listNode := Linked_list.ListNode{2, nil}
+	//head.Next = &listNode
+	//listNode1 := Linked_list.ListNode{13, nil}
+	//head.Next.Next = &listNode1
+	//listNode2 := Linked_list.ListNode{3, nil}
+	//head.Next.Next.Next = &listNode2
+	//listNode3 := Linked_list.ListNode{8, nil}
+	//head.Next.Next.Next.Next = &listNode3
+	//fmt.Println(Linked_list.RemoveNodes(&head))
+	graph := [][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}
+	fmt.Println(Graph.GetMaximumGold(graph))
+
 }
 
 //func main() {

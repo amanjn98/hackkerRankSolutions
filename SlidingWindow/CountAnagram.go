@@ -6,9 +6,9 @@ import (
 )
 
 //public class Anagrams {
-//    public static void main(String[] args) {
-//        String str = "aabaabbabbabaa";
-//        String ptr = "aaba";
+//    public static void main(StringTopic[] args) {
+//        StringTopic str = "aabaabbabbabaa";
+//        StringTopic ptr = "aaba";
 //        int sum = 0;
 //        int count = 0;
 //        int k = ptr.length();

@@ -40,10 +40,10 @@ func minimumNumber(n int32, passw string) int32 {
 
 }
 
-func main() {
-	a:="2bbbb"
-	fmt.Println(minimumNumber(int32(len(a)),a))
-}
+// func main() {
+// 	a:="2bbbb"
+// 	fmt.Println(minimumNumber(int32(len(a)),a))
+// }
 
 
 

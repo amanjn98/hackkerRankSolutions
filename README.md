@@ -275,3 +275,7 @@ pub/sub
 
 Good explanation for hashing 
 [//]: # (https://www.geeksforgeeks.org/introduction-to-hashing-data-structure-and-algorithm-tutorials/)
+
+
+BFS: Used when you want to find the shortest path
+DFS + Backtracking: Used when you want to brute-force all possible combinations.
