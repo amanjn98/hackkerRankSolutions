@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./Graph"
+	"./Linked_list"
 	"fmt"
 )
 
@@ -10,18 +10,24 @@ func main() {
 	//trust := [][]int{{1, 3}, {2, 3}, {3, 1}}
 	//fmt.Println(Array.FindJudge(3, trust))
 	//fmt.Println(Graph.FindAllPeople(4, [][]int{{3, 1, 3}, {1, 2, 2}, {0, 3, 3}}, 3))
-	//head := Linked_list.ListNode{5, nil}
-	//listNode := Linked_list.ListNode{2, nil}
-	//head.Next = &listNode
-	//listNode1 := Linked_list.ListNode{13, nil}
-	//head.Next.Next = &listNode1
-	//listNode2 := Linked_list.ListNode{3, nil}
-	//head.Next.Next.Next = &listNode2
-	//listNode3 := Linked_list.ListNode{8, nil}
-	//head.Next.Next.Next.Next = &listNode3
-	//fmt.Println(Linked_list.RemoveNodes(&head))
-	graph := [][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}
-	fmt.Println(Graph.GetMaximumGold(graph))
+	head := Linked_list.ListNode{0, nil}
+	listNode := Linked_list.ListNode{3, nil}
+	head.Next = &listNode
+	listNode1 := Linked_list.ListNode{1, nil}
+	head.Next.Next = &listNode1
+	listNode2 := Linked_list.ListNode{0, nil}
+	head.Next.Next.Next = &listNode2
+	listNode3 := Linked_list.ListNode{4, nil}
+	head.Next.Next.Next.Next = &listNode3
+	listNode4 := Linked_list.ListNode{5, nil}
+	head.Next.Next.Next.Next.Next = &listNode4
+	listNode5 := Linked_list.ListNode{2, nil}
+	head.Next.Next.Next.Next.Next.Next = &listNode5
+	listNode6 := Linked_list.ListNode{0, nil}
+	head.Next.Next.Next.Next.Next.Next.Next = &listNode6
+	fmt.Println(Linked_list.MergeNodes(&head))
+	//graph := [][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}
+	//fmt.Println(Graph.GetMaximumGold(graph))
 
 }
 

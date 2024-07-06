@@ -26,5 +26,5 @@ func doubleIt(head *ListNode) *ListNode {
 		res = res / 10
 		number = append(number, rem)
 	}
-
+	return curr
 }
