@@ -279,3 +279,5 @@ Good explanation for hashing
 
 BFS: Used when you want to find the shortest path
 DFS + Backtracking: Used when you want to brute-force all possible combinations.
+A binary tree is a hierarchical data structure in computer science where each node can have at most two children, 
+referred to as the left child and the right child.

@@ -1,6 +1,8 @@
 package Dp
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //You are given an array of integers stones where stones[i] is the weight of the ith stone.
 //
@@ -59,4 +61,13 @@ func SubsetSumForMin(sum int, arr []int) [][]bool {
 		}
 	}
 	return dp
+}
+
+func makeProfit(prices []int) {
+	prices := append([]int{0}, prices...)
+	res := 0
+	for i := 0; i < len(prices); i++ {
+		res += max(prices[i]-prices[i], 0)
+	}
+	return res
 }

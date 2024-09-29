@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./Linked_list"
+	"./StringTopic"
 	"fmt"
 )
 
@@ -10,24 +10,33 @@ func main() {
 	//trust := [][]int{{1, 3}, {2, 3}, {3, 1}}
 	//fmt.Println(Array.FindJudge(3, trust))
 	//fmt.Println(Graph.FindAllPeople(4, [][]int{{3, 1, 3}, {1, 2, 2}, {0, 3, 3}}, 3))
-	head := Linked_list.ListNode{0, nil}
-	listNode := Linked_list.ListNode{3, nil}
-	head.Next = &listNode
-	listNode1 := Linked_list.ListNode{1, nil}
-	head.Next.Next = &listNode1
-	listNode2 := Linked_list.ListNode{0, nil}
-	head.Next.Next.Next = &listNode2
-	listNode3 := Linked_list.ListNode{4, nil}
-	head.Next.Next.Next.Next = &listNode3
-	listNode4 := Linked_list.ListNode{5, nil}
-	head.Next.Next.Next.Next.Next = &listNode4
-	listNode5 := Linked_list.ListNode{2, nil}
-	head.Next.Next.Next.Next.Next.Next = &listNode5
-	listNode6 := Linked_list.ListNode{0, nil}
-	head.Next.Next.Next.Next.Next.Next.Next = &listNode6
-	fmt.Println(Linked_list.MergeNodes(&head))
-	//graph := [][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}
-	//fmt.Println(Graph.GetMaximumGold(graph))
+	//head := Linked_list.ListNode{0, nil}
+	//listNode := Linked_list.ListNode{3, nil}
+	//head.Next = &listNode
+	//listNode1 := Linked_list.ListNode{1, nil}
+	//head.Next.Next = &listNode1
+	//listNode2 := Linked_list.ListNode{0, nil}
+	//head.Next.Next.Next = &listNode2
+	//listNode3 := Linked_list.ListNode{4, nil}
+	//head.Next.Next.Next.Next = &listNode3
+	//listNode4 := Linked_list.ListNode{5, nil}
+	//head.Next.Next.Next.Next.Next = &listNode4
+	//listNode5 := Linked_list.ListNode{2, nil}
+	//head.Next.Next.Next.Next.Next.Next = &listNode5
+	//listNode6 := Linked_list.ListNode{0, nil}
+	//head.Next.Next.Next.Next.Next.Next.Next = &listNode6
+	//fmt.Println(Linked_list.MergeNodes(&head))
+	//arr := [][]int{{1, 4}, {0, 5}}
+	//arr := []string{"c", "exjk", "nbmg", "kgnas", "s", "oydx", "ghpao", "c", "r", "ohdm", "fq", "ashgg", "mm", "cc", "mymy", "w", "t", "neb", "grjdb", "cukk", "ujyhn", "dq", "hhuo", "qu", "seslw", "ybulz", "iug", "rs", "kyfu", "krz", "nw", "txnn", "r", "zpuao", "sh", "rfc", "c", "hgr", "jfia", "egm", "gmuuv", "gh", "x", "nfvgv", "ibo", "al", "wn", "o", "dyu", "zgkk", "gdzrf", "m", "ui", "xwsj", "zeld", "muowr", "d", "xgiu", "yfu"}
+	//fmt.Println(Array.KthDistinct(arr, 19))
+	//uf := Graph.NewUnionFind(10)
+	//uf.Union(1, 2)
+	//uf.Union(2, 3)
+	//println(uf.Find(1) == uf.Find(3)) // Output: true
+	fmt.Println(StringTopic.GetLucky("qhquvppzooyt", 6))
+	//fmt.Println(Array.NearestPalindromic("12932"))
+	//graph := [][]int{{0, 1, 2}, {0, 4, 8}, {1, 2, 3}, {1, 4, 2}, {2, 3, 1}, {3, 4, 1}}
+	//Graph.FlyodWarshall(graph, 5, 2)
 
 }
 
