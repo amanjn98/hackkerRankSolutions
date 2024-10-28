@@ -1,10 +1,9 @@
 package main
 
 import (
-"fmt"
+	"fmt"
 	"net/url"
 	"os/exec"
-"runtime"
 )
 
 func execute() {
@@ -12,11 +11,11 @@ func execute() {
 	// here we perform the pwd command.
 	// we can store the output of this in our out variable
 	// and catch any errors in err
-	podname:="ibm-storage-metrics-agent-7987948688-2j9kz"
-	route:="https://private.containers.test.cloud.ibm.com"
+	podname := "ibm-storage-metrics-agent-7987948688-2j9kz"
+	route := "https://private.containers.test.cloud.ibm.com"
 	u, _ := url.Parse(route)
-	cmd := fmt.Sprintf("kubectl exec %s -n kube-system -- bash -c 'ping -c 2 %s'", podname,u.Host)
-	out, err := exec.Command("bash", "-c",cmd).Output()
+	cmd := fmt.Sprintf("kubectl exec %s -n kube-system -- bash -c 'ping -c 2 %s'", podname, u.Host)
+	out, err := exec.Command("bash", "-c", cmd).Output()
 
 	// if there is an error with our execution
 	// handle it here

@@ -1,16 +1,15 @@
 package main
 
-import "fmt"
 // Save the index in one of the array so that each index can be used every time needed
 func permutationEquation(p []int32) []int32 {
 	// Write your code here
-	y:=make([]int32,0)
-	for i:=0;i<len(p);i++{
-		y=append(y,1+getIndex(int32(i)+1,p))
+	y := make([]int32, 0)
+	for i := 0; i < len(p); i++ {
+		y = append(y, 1+getIndex(int32(i)+1, p))
 	}
-	z:=make([]int32,0)
-	for i:=0;i<len(p);i++{
-		z=append(z,y[y[i]-1])
+	z := make([]int32, 0)
+	for i := 0; i < len(p); i++ {
+		z = append(z, y[y[i]-1])
 	}
 	return z
 }
@@ -18,8 +17,8 @@ func permutationEquation(p []int32) []int32 {
 func getIndex(elem int32, a []int32) int32 {
 	var i int32
 
-	for i=0;i<int32(len(a));i++{
-		if elem==a[i]{
+	for i = 0; i < int32(len(a)); i++ {
+		if elem == a[i] {
 			return i
 		}
 	}
@@ -27,7 +26,7 @@ func getIndex(elem int32, a []int32) int32 {
 	return -1
 }
 
-func main() {
-	p:=[]int32{5,2,1,3,4}
-	fmt.Println(permutationEquation(p))
-}
+// func main() {
+// 	p:=[]int32{5,2,1,3,4}
+// 	fmt.Println(permutationEquation(p))
+// }

@@ -40,30 +40,30 @@ func fetchData(url string, wg *sync.WaitGroup, ch chan<- ApiResponse) {
 	ch <- data
 }
 
-func main() {
-	// List of URLs to fetch data from
-	urls := []string{
-		"https://api.example.com/data1",
-		"https://api.example.com/data2",
-		"https://api.example.com/data3",
-	}
+// func main() {
+// 	// List of URLs to fetch data from
+// 	urls := []string{
+// 		"https://api.example.com/data1",
+// 		"https://api.example.com/data2",
+// 		"https://api.example.com/data3",
+// 	}
 
-	// Channel to receive API responses
-	ch := make(chan ApiResponse, len(urls))
-	var wg sync.WaitGroup
+// 	// Channel to receive API responses
+// 	ch := make(chan ApiResponse, len(urls))
+// 	var wg sync.WaitGroup
 
-	// Start goroutines for each API request
-	for _, url := range urls {
-		wg.Add(1)
-		go fetchData(url, &wg, ch)
-	}
+// 	// Start goroutines for each API request
+// 	for _, url := range urls {
+// 		wg.Add(1)
+// 		go fetchData(url, &wg, ch)
+// 	}
 
-	// Wait for all goroutines to finish
-	wg.Wait()
-	close(ch)
+// 	// Wait for all goroutines to finish
+// 	wg.Wait()
+// 	close(ch)
 
-	// Process received data
-	for data := range ch {
-		fmt.Printf("Received data: %s\n", data.Data)
-	}
-}
+// 	// Process received data
+// 	for data := range ch {
+// 		fmt.Printf("Received data: %s\n", data.Data)
+// 	}
+// }

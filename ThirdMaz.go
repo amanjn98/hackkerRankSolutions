@@ -49,7 +49,7 @@ func thirdMax(nums []int) int {
 	}
 }
 
-func main() {
-	nums:=[]int{1,2,2,5,3,5}
-	fmt.Println(thirdMax(nums))
-}
+// func main() {
+// 	nums:=[]int{1,2,2,5,3,5}
+// 	fmt.Println(thirdMax(nums))
+// }
