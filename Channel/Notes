@@ -1,0 +1,5 @@
+Use channels when you need safe communication between goroutines, especially when passing data or signals.
+Use buffered channels when you want to decouple the send and receive operations and allow goroutines to work with multiple
+values without immediate synchronization.
+Use wait groups when you need to synchronize a group of goroutines and ensure they all complete their work before proceeding.
+Use wait groups for basic synchronization scenarios with minimal complexity and when the number of goroutines to wait for is fixed.
