@@ -13,7 +13,7 @@ type Solution struct {
 	currentMaxHeight      int
 }
 
-func treeQueries(root *TreeNode, queries []int) []int {
+func TreeQueries(root *TreeNode, queries []int) []int {
 	sol := &Solution{}
 
 	// First traversal from left to right
