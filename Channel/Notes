@@ -3,3 +3,33 @@ Use buffered channels when you want to decouple the send and receive operations 
 values without immediate synchronization.
 Use wait groups when you need to synchronize a group of goroutines and ensure they all complete their work before proceeding.
 Use wait groups for basic synchronization scenarios with minimal complexity and when the number of goroutines to wait for is fixed.
+
+
+Context is a built-in package in the Go standard library that provides a powerful toolset for managing concurrent operations.
+It enables the propagation of cancellation signals, deadlines, and values across goroutines, ensuring that related
+operations can gracefully terminate when necessary. With context, you can create a hierarchy of goroutines and pass
+important information down the chain.
+
+chan<- int
+You can restrict the use of channel by using the send or receive only chanel
+Go schedular is present in go binary and it takes thread from the os in order to execute the go program
+A context can be used to send messages across hierarchy of channel
+
+context.Background -> It is used to create the root context from parents to child. Internally , it is uses channel itself
+
+
+There are a few tradeoffs and limitations to consider when using interfaces in Go:
+Interfaces can add complexity to your code: Defining and implementing interfaces can add an extra layer of abstraction to
+your code, which can make it more complex and harder to understand. It’s important to carefully consider whether using
+interfaces is the best way to solve a particular problem, and to use them in a way that keeps your code as simple and
+straightforward as possible.
+Interfaces can make code less efficient: Because Go interfaces are implemented using reflection, using interfaces can
+result in slower code than using concrete types directly. This can be especially true for interfaces with many methods
+or methods with large signatures. In these cases, it may be more efficient to use concrete types instead of interfaces.
+Interfaces can’t enforce behavior: Go interfaces are a compile-time concept and do not enforce behavior at runtime.
+This means that it’s possible for a type to implement an interface without actually implementing the required behavior.
+It’s important to ensure that types that implement an interface are correctly implementing the required behavior, either
+by testing them or by using other means to enforce this.
+Interfaces can’t define state: Go interfaces can’t define fields or state, and can only specify method signatures.
+This means that if you want to define state or behavior that is shared by multiple types, you’ll need to use other means,
+such as inheritance or composition.

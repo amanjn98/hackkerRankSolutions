@@ -3,6 +3,7 @@ package Trial
 import (
 	"bytes"
 	"encoding/json"
+	"io"
 	"io/ioutil"
 	"net/http"
 )
@@ -14,10 +15,7 @@ func hitAPIWithBody(url string, method string, body interface{}) ([]byte, error)
 	// Marshal the request body (if applicable)
 	var jsonData []byte
 	if body != nil {
-		jsonData, err = json.Marshal(body)
-		if err != nil {
-			return nil, err
-		}
+		jsonData, _ = json.Marshal(body)
 	}
 
 	// Create a new HTTP request
@@ -36,7 +34,12 @@ func hitAPIWithBody(url string, method string, body interface{}) ([]byte, error)
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func(Body io.ReadCloser) {
+		err = Body.Close()
+		if err != nil {
+
+		}
+	}(resp.Body)
 
 	// Read the response body
 	responseBody, err := ioutil.ReadAll(resp.Body)

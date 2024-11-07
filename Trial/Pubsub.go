@@ -1,4 +1,4 @@
-package main
+package Trial
 
 import (
 	"fmt"
@@ -19,8 +19,9 @@ func connectRedis() {
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
+	fmt.Println(client)
 }
 
 func main() {
-	fmt.Println(connectRedis())
+	connectRedis()
 }

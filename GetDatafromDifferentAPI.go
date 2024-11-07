@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"sync"
 )
@@ -24,7 +24,7 @@ func fetchData(url string, wg *sync.WaitGroup, ch chan<- ApiResponse) {
 	}
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Printf("Error reading response from %s: %v\n", url, err)
 		return
@@ -38,6 +38,10 @@ func fetchData(url string, wg *sync.WaitGroup, ch chan<- ApiResponse) {
 	}
 
 	ch <- data
+}
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, World!")
 }
 
 // func main() {
