@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./Tree"
 	"fmt"
+	"github.com/hackkerRankSolutions/Array"
 )
 
 func main() {
@@ -37,15 +37,17 @@ func main() {
 	// root := Tree.Initialize()
 	// Tree.BinaryPathSum(&root, 0, []int{}, 7)
 
-	root := &Tree.TreeNode{Val: 1}
-	root.Left = &Tree.TreeNode{Val: 3}
-	root.Left.Left = &Tree.TreeNode{Val: 2}
-	root.Right = &Tree.TreeNode{Val: 4}
-	root.Right.Right = &Tree.TreeNode{Val: 5}
-	root.Right.Left = &Tree.TreeNode{Val: 6}
-	root.Right.Right.Right = &Tree.TreeNode{Val: 7}
-	queries := []int{2, 4, 6}
-	fmt.Println(Tree.TreeQueries(root, queries))
+	//root := &Tree.TreeNode{Val: 1}
+	//root.Left = &Tree.TreeNode{Val: 3}
+	//root.Left.Left = &Tree.TreeNode{Val: 2}
+	//root.Right = &Tree.TreeNode{Val: 4}
+	//root.Right.Right = &Tree.TreeNode{Val: 5}
+	//root.Right.Left = &Tree.TreeNode{Val: 6}
+	//root.Right.Right.Right = &Tree.TreeNode{Val: 7}
+	//queries := []int{2, 4, 6}
+	//fmt.Println(Tree.TreeQueries(root, queries))
+	arr := []int{1, 0, 2, 3, 4}
+	Array.MaxChunksToSorted(arr)
 	//root := Tree.TreeNode{Val: -2}
 	//root.Right = &Tree.TreeNode{Val: -3}
 	//arr := []int{2, 3, 7, -9, 4, 4, 7, 3, 2, 10, 8, 15, 2, 1, -8, 10, -5, 10, -2, 21, 9, 20, 0, 4, 24, 5, 12,
@@ -69,3 +71,27 @@ func main() {
 //	//result := Recursion.RemoveDuplicates(ipArray)
 //	//return int64(len(result))
 //}
+
+//func main() {
+//	cc := CreditCard{}
+//	Checkout(cc, 100)
+//}
+
+type PaymentType interface {
+	Pay(amount float64)
+}
+type NewPaymentType func(amount float64) PaymentType
+type CreditCard struct{}
+
+func (cc CreditCard) Pay(amount float64) {
+	fmt.Println("Credit Card Payed!")
+}
+
+type Phonepe struct{}
+
+func (p Phonepe) Pay(amount float64) {
+	fmt.Println("Phonepe.Payed!")
+}
+func Checkout(payment PaymentType, amount float64) {
+	payment.Pay(amount)
+}
