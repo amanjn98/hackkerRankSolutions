@@ -1,11 +1,14 @@
 package main
 
 import (
+	"./automobile"
 	"fmt"
-	"github.com/hackkerRankSolutions/Array"
+	"github.com/hackkerRankSolutions/Channel/ConcurrencyPattern"
 )
 
 func main() {
+	acoord := automobile.Car{Name: "Accord", Type: "crv"}
+	fmt.Println(acoord)
 	//matrix := [][]rune{
 	//	{'O', 'M', 'O', 'O', 'X'},
 	//	{'O', 'X', 'X', 'O', 'M'},
@@ -46,8 +49,9 @@ func main() {
 	//root.Right.Right.Right = &Tree.TreeNode{Val: 7}
 	//queries := []int{2, 4, 6}
 	//fmt.Println(Tree.TreeQueries(root, queries))
-	arr := []int{1, 0, 2, 3, 4}
-	Array.MaxChunksToSorted(arr)
+	//arr := []int{1, 0, 2, 3, 4}
+	//Array.MoveZeroes(arr)
+	ConcurrencyPattern.FanOutFanIn()
 	//root := Tree.TreeNode{Val: -2}
 	//root.Right = &Tree.TreeNode{Val: -3}
 	//arr := []int{2, 3, 7, -9, 4, 4, 7, 3, 2, 10, 8, 15, 2, 1, -8, 10, -5, 10, -2, 21, 9, 20, 0, 4, 24, 5, 12,

@@ -25,3 +25,12 @@ func RotateLeft(arr []int, count int) {
 	}
 	fmt.Println(arr)
 }
+
+func RotateRight(nums int ,k int){
+   rotated:=make([]int,len(nums))
+    for i:=0;i<len(nums);i++{
+        rotated[(i+k)%len(nums)]=nums[i]
+    }
+    for i:=0;i<len(nums);i++{
+        nums[i]=rotated[i]
+}}
